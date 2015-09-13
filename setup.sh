@@ -28,4 +28,3 @@ mkdir -p ~/opt/cassandra/data/saved_caches
 mkdir -p ~/opt/cassandra/logs
 . ./env.sh
 ~/opt/cassandra/bin/cassandra
-
