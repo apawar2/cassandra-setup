@@ -10,11 +10,15 @@ wget --no-cookies \
 "http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz"
 
 tar -xzvf jdk-7u79-linux-x64.tar.gz
-sudo mkdir /usr/lib/jvm
+sudo -p mkdir /usr/lib/jvm
 sudo mv jdk1.7.0_79 /usr/lib/jvm
 sudo update-alternatives --install "/usr/bin/java" "java"     "/usr/lib/jvm/jdk1.7.0_79/bin/java" 1
 sudo update-alternatives --install "/usr/bin/javac" "javac"     "/usr/lib/jvm/jdk1.7.0_79/bin/javac" 1
 sudo update-alternatives --install "/usr/bin/javaws" "javaws"     "/usr/lib/jvm/jdk1.7.0_79/bin/javaws" 1
+sudo update-alternatives --set java "/usr/lib/jvm/jdk1.7.0_79/bin/java"
+sudo update-alternatives --set javac "/usr/lib/jvm/jdk1.7.0_79/bin/javac"
+sudo update-alternatives --set javaws "/usr/lib/jvm/jdk1.7.0_79/bin/javaws"
+
 java -version
 javac -version
 javaws -version
