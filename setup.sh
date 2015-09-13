@@ -17,6 +17,8 @@ sudo update-alternatives --install "/usr/bin/javaws" "javaws"     "/usr/lib/jvm/
 java -version
 javac -version
 javaws -version
+
+#Download Apache Cassandra 2.2.1 and Configure
 wget http://mirrors.koehn.com/apache/cassandra/2.2.1/apache-cassandra-2.2.1-bin.tar.gz
 gzip -dc apache-cassandra-2.2.1-bin.tar.gz | tar xf -
 ln -s ~/opt/packages/apache-cassandra-2.2.1 ~/opt/cassandra
@@ -25,6 +27,5 @@ mkdir -p ~/opt/cassandra/data/commitlog
 mkdir -p ~/opt/cassandra/data/saved_caches
 mkdir -p ~/opt/cassandra/logs
 . ./env.sh
-#export PATH=$PATH:~/opt/cassandra/bin
 ~/opt/cassandra/bin/cassandra
 
